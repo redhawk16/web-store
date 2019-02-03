@@ -1,0 +1,14 @@
+/* Dots inside the fotorama container */
+.fotorama__nav {
+    margin-top: -40px;
+    z-index: 20;
+	height: 80px;
+}
+.fotorama__dot {
+    border-color: #eee;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+}
+.fotorama__active .fotorama__dot {
+    background-color: #eee;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
+}
