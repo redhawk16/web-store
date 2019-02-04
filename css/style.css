@@ -22,22 +22,30 @@ header {
     width: 200px;
     height: 100%;
     padding: 5px 10px 5px 10px;
-    background: url("../img/logo.png") no-repeat;
-    background-size: auto 90%;
-    background-position: center;
     float: left;
+    text-align: center;
 }
 
-nav {
-
+.nav {
+    height: 40px;
+    text-align: center;
 }
 
-nav a {
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    display: inline;
+    padding-right: 20px;
+}
+
+.nav a {
         text-decoration: none;
         color: black;
     }
 
-nav a:hover { 
+.nav a:hover { 
         text-decoration: none;
         color: black;
     }
