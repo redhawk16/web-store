@@ -43,6 +43,7 @@ header {
 .nav a {
         text-decoration: none;
         color: black;
+        padding: 0px 10px 8px 10px;
     }
 
 .nav a:hover { 
