@@ -13,10 +13,35 @@
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
 }
 
-header{
+header {
 	width: 100%;
 	height: 120px; 
 }
+
+.logo {
+    width: 200px;
+    height: 100%;
+    padding: 5px 10px 5px 10px;
+    background: url("../img/logo.png") no-repeat;
+    background-size: auto 90%;
+    background-position: center;
+    float: left;
+}
+
+nav {
+
+}
+
+nav a {
+        text-decoration: none;
+        color: black;
+    }
+
+nav a:hover { 
+        text-decoration: none;
+        color: black;
+    }
+
 
 .slider {
 	width: 100%;
