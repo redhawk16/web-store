@@ -1,18 +1,3 @@
-/* Dots inside the fotorama container */
-.fotorama__nav {
-    margin-top: -40px;
-    z-index: 20;
-	height: 80px;
-}
-.fotorama__dot {
-    border-color: #eee;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, .5);
-}
-.fotorama__active .fotorama__dot {
-    background-color: #eee;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
-}
-
 header {
 	width: 100%;
 	height: 120px; 
@@ -27,8 +12,12 @@ header {
 }
 
 .nav {
-    height: 40px;
+    width: 50%;
+    height: 50%;
+    align-items: center;
     text-align: center;
+    margin: 0 auto;
+    padding-top: 4rem;
 }
 
 .nav ul {
@@ -36,23 +25,60 @@ header {
 }
 
 .nav li {
-    display: inline;
-    padding-right: 20px;
+    display: inline-block;
+    position: relative;
+    padding: 0px 10px 0px 10px;
 }
 
 .nav a {
-        text-decoration: none;
-        color: black;
-        padding: 0px 10px 8px 10px;
-    }
+    text-decoration: none;
+    color: black;
+    padding: 0px 10px 8px 10px;
+    display: inline-block;
+    padding: .75rem 0;
+}
 
-.nav a:hover { 
-        text-decoration: none;
-        color: black;
-    }
+.nav ul li {
+    font-family: Verdana;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 
+.nav li:hover:after, .nav li.active:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    margin-bottom: -5px;
+    width: 100%;
+    border-bottom: tomato solid 4px;
+}
 
-.slider {
+.d-block {
 	width: 100%;
 	height: 420px;
+    object-fit: cover;
 }
+
+
+
+/*.two:hover ~ hr {
+  margin-left: 25%;
+}
+
+.three:hover ~ hr {
+  margin-left: 53%;
+}
+
+.four:hover ~ hr {
+  margin-left: 78%;
+}
+
+hr {
+  height: .25rem;
+  width: 25%;
+  margin: 0;
+  background: tomato;
+  border: none;
+  transition: .3s ease-in-out;
+}*/
