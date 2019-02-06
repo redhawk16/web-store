@@ -6,8 +6,8 @@
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/bootstrap-swipe-carousel.min.js">sensitivity: 'high'</script><!-- Carousel Bootstrap Swipe Fix -->
-		<script src="js/script.js"></script>
+		<script src="js/bootstrap-swipe-carousel.min.js"></script><!-- Carousel Bootstrap Swipe Fix -->
+		<script async src="js/script.js"></script>
 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/fawesome.css" rel="stylesheet">
@@ -18,14 +18,13 @@
 	<body>
 		<header>
 			<div class="logo"><a href="/"><img src="img/logo.png" width="auto" height="100%" align="middle" alt="Logo" title="На главную"></a></div>
-			<nav class="nav">
+			<nav id="nav" class="nav">
 				<i class="fab fa-github-square"></i>
 				<ul>
-					<li class="one"><a href="#MAIN">Главная</a></li>
-					<li class="two"><a href="#CATALOG">Каталог</a></li>
-					<li class="three"><a href="#CONTACT">Контакты</a></li>
-					<li class="four"><a href="#ABOUT">О нас</a></li>
-					
+					<li class="menu active"><a href="#MAIN">Главная</a></li>
+					<li class="menu"><a href="#CATALOG">Каталог</a></li>
+					<li class="menu"><a href="#CONTACT">Контакты</a></li>
+					<li class="menu"><a href="#ABOUT">О нас</a></li>
 				</ul>	
 			</nav>
 
@@ -44,6 +43,7 @@
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Название</h5>
 							<p>Описание</p>
+							<button type="button" class="btn btn-light">Light</button>
 						</div>
 					</div>
 					<div class="carousel-item">

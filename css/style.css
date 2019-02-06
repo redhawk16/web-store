@@ -1,6 +1,10 @@
 header {
 	width: 100%;
-	height: 120px; 
+	height: 70px;
+}
+
+body{
+	background-color: #fffdfc;
 }
 
 .logo {
@@ -12,22 +16,10 @@ header {
 }
 
 .nav {
-    width: 50%;
+    width: 40%;
     height: 50%;
-    align-items: center;
     text-align: center;
     margin: 0 auto;
-    padding-top: 4rem;
-}
-
-.nav ul {
-    list-style: none;
-}
-
-.nav li {
-    display: inline-block;
-    position: relative;
-    padding: 0px 10px 0px 10px;
 }
 
 .nav a {
@@ -36,22 +28,24 @@ header {
     padding: 0px 10px 8px 10px;
     display: inline-block;
     padding: .75rem 0;
+    transition: all .4s ease;
+}
+
+.nav a:hover {
+	color: tomato;
 }
 
 .nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
     font-family: Verdana;
     text-transform: uppercase;
-    cursor: pointer;
+    transition: all .3s ease;    
 }
 
-.nav li:hover:after, .nav li.active:after {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    margin-bottom: -5px;
-    width: 100%;
-    border-bottom: tomato solid 4px;
+.nav li:hover, .nav .active {
+    border-bottom: tomato solid 3px;
 }
 
 .d-block {
@@ -59,26 +53,3 @@ header {
 	height: 420px;
     object-fit: cover;
 }
-
-
-
-/*.two:hover ~ hr {
-  margin-left: 25%;
-}
-
-.three:hover ~ hr {
-  margin-left: 53%;
-}
-
-.four:hover ~ hr {
-  margin-left: 78%;
-}
-
-hr {
-  height: .25rem;
-  width: 25%;
-  margin: 0;
-  background: tomato;
-  border: none;
-  transition: .3s ease-in-out;
-}*/
