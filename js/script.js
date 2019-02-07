@@ -1,3 +1,4 @@
+/*	NavBar fix	*/
 var navbar = document.getElementById("nav");
 var nav = navbar.getElementsByClassName("menu");
 
@@ -14,3 +15,16 @@ for (var i = 0; i < nav.length; i++) {
 		nav[0].className += " active";
 	});
 }
+
+/*	Owl-carousel initialize	*/
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+	margin: 30,
+	dots: false,
+	nav: true,
+	autoWidth:true,
+	navText : [
+		'<i class="fa fa-angle-left" aria-hidden="true"></i>',
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>']
+  });
+});

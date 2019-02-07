@@ -4,29 +4,38 @@
 		<meta charset="utf-8">
 		<title>WEB - Витрина</title>
 
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/fawesome.css" rel="stylesheet">
+		<link href="css/owl.carousel.min.css" rel="stylesheet">
+		<link href="css/owl.theme.default.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/bootstrap-swipe-carousel.min.js"></script><!-- Carousel Bootstrap Swipe Fix -->
+		<script src="js/owl.carousel.min.js"></script>
 		<script async src="js/script.js"></script>
-
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/fawesome.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-
-	</head>
+	</head>		
 
 	<body>
 		<header>
-			<div class="logo"><a href="/"><img src="img/logo.png" width="auto" height="100%" align="middle" alt="Logo" title="На главную"></a></div>
-			<nav id="nav" class="nav">
-				<i class="fab fa-github-square"></i>
-				<ul>
-					<li class="menu active"><a href="#MAIN">Главная</a></li>
-					<li class="menu"><a href="#CATALOG">Каталог</a></li>
-					<li class="menu"><a href="#CONTACT">Контакты</a></li>
-					<li class="menu"><a href="#ABOUT">О нас</a></li>
-				</ul>	
-			</nav>
+			<div class="header">
+				<div class="navbar">
+					<div class="logo"><a href="/"><img src="img/logo.png" width="auto" height="100%" align="middle" alt="Logo" title="На главную"></a></div>
+					<nav id="nav" class="nav">
+						<ul style="padding-left: 0px;">
+							<li class="menu active"><a href="#MAIN">Главная</a></li>
+							<li class="menu"><a href="#CATALOG">Каталог</a></li>
+							<li class="menu"><a href="#CONTACT">Контакты</a></li>
+							<li class="menu"><a href="#ABOUT">О нас</a></li>
+						</ul>	
+					</nav>
+					<div class="info">
+						<a class="phone" href="tel:89994574862"><i class="fas fa-mobile"></i>8 (999) 457 48-62</a>
+						<a class="email" href="mailto:pochekuev@me.com"><i class="fas fa-envelope"></i>pochekuev@me.com</a>
+					</div>
+				</div>
+			</div>
 
 			<!-- Carousel -->
 			<div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
@@ -88,5 +97,31 @@
 			</div>
 		</header>
 
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h2>Добро пожаловать!</h2>
+					<p>Рада приветствовать вас на своем сайте.</p>
+					<i class="fab fa-github-square"></i>
+					<div class="owl-carousel owl-theme">
+					    <div class="item"><h4>Процессоры</h4></div>
+					    <div class="item"><h4>Метеринские платы</h4></div>
+					    <div class="item"><h4>Видеокарты</h4></div>
+					    <div class="item"><h4>Оперативная память</h4></div>
+					    <div class="item"><h4>Блоки питания</h4></div>
+					    <div class="item"><h4>Корпуса</h4></div>
+					</div>
+					<div class="owl-theme">
+				        <div class="owl-controls">
+				            <div class="custom-nav owl-nav"></div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			Copyright
+		</footer>
 	</body>
 </html>
