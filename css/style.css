@@ -110,14 +110,57 @@ header {
     object-fit: cover;
 }
 
+
+/* catalog.html */
+
+.item-info {
+    width: 95%;
+    height: 100%;
+    margin: auto;
+}
+
+.item-img {
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+
+.item-about {
+    float: left;
+    margin: 0rem 0rem 0rem 1.2rem;
+}
+
+.item-name { margin-bottom: 0.2rem }
+
+.item-num {
+    float: right;
+    margin-right: 10rem; 
+}
+
+.item-price {
+    float: right;
+}
+
+.items-slider {
+    background: none;
+}
+
+.owl-theme {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem; 
+}
+
 .item {
     background-color: #4DC7A0;
     width: 200px;
     height: 200px;
 }
 
+.item h4 { text-align: center; padding: 35% 0; color: #efffff; }
+
 .owl-prev, .owl-next {
-    width: 15px;
+    width: 20px;
     height: 40px;
     position: absolute;
     top: 50%;
@@ -127,9 +170,9 @@ header {
 }
 
 .owl-prev:hover, .owl-next:hover {
-    border: 0px solid tomato;
+    border: 0px solid grey;
 }
 
-.owl-prev { left: 0; /*-20px*/ }
-.owl-next { right: 0; }
-.owl-prev i, .owl-next i { font-size: 2rem; color: #cecece; }
+.owl-prev { left: -3rem; /*-20px*/ }
+.owl-next { right: -3rem; }
+.owl-prev i, .owl-next i { font-size: 2.2rem; color: #cecece; }
