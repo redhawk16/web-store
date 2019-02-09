@@ -19,7 +19,7 @@ for (var i = 0; i < nav.length; i++) {
 /*	Owl-carousel initialize	*/
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
-	margin: 30,
+	margin: 5,
 	dots: false,
 	nav: true,
 	autoWidth:true,
@@ -28,3 +28,8 @@ $(document).ready(function(){
         '<i class="fa fa-angle-right" aria-hidden="true"></i>']
   });
 });
+
+/* Item select */
+function select_item() {
+	alert("Аня крокусяга!");
+}

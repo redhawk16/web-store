@@ -96,7 +96,12 @@ header {
 }
 
 .info .fas {
-    padding-right: 0.3rem
+    padding-right: 0.3rem;
+    color: #007f91; 
+}
+
+.info a:hover {
+    color: #007f91;
 }
 
 .info .fa-mobile {
@@ -155,6 +160,10 @@ header {
     background-color: #4DC7A0;
     width: 200px;
     height: 200px;
+}
+
+.iselect {
+    box-shadow: 0 0 5px 1px rgba(0, 183, 45, 0.8);
 }
 
 .item h4 { text-align: center; padding: 35% 0; color: #efffff; }
