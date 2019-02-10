@@ -19,10 +19,18 @@ for (var i = 0; i < nav.length; i++) {
 /*	Owl-carousel initialize	*/
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
-	margin: 5,
+	margin: 20,
 	dots: false,
 	nav: true,
-	autoWidth:true,
+	autoWidth: false,
+	responsiveClass:true,
+	responsive : {
+	    0 : { items: 1 },
+	    640 : { items: 2 },
+	    768 : { items: 2 },
+	    1000 : { items: 3 },
+	    1280 : { items: 4 }
+	},
 	navText : [
 		'<i class="fa fa-angle-left" aria-hidden="true"></i>',
         '<i class="fa fa-angle-right" aria-hidden="true"></i>']

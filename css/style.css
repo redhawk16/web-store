@@ -157,13 +157,7 @@ header {
 }
 
 .item {
-    background-color: #4DC7A0;
-    width: 200px;
-    height: 200px;
-}
 
-.iselect {
-    box-shadow: 0 0 5px 1px rgba(0, 183, 45, 0.8);
 }
 
 .item h4 { text-align: center; padding: 35% 0; color: #efffff; }
@@ -185,3 +179,71 @@ header {
 .owl-prev { left: -3rem; /*-20px*/ }
 .owl-next { right: -3rem; }
 .owl-prev i, .owl-next i { font-size: 2.2rem; color: #cecece; }
+
+.itemsview figure {
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
+    background: #007f91 no-repeat center;
+    box-shadow: 0 0 0 128px rgba(0, 0, 0, 0.1) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    transition: 0.2s;
+}
+
+.itemsview figure h5 {
+    transition: 0.2s;
+    transform: translateY(20px);
+
+}.itemsview figure p {
+    transition: 0.2s;
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.itemsview figure:before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    transition: 0.2s;
+    transform: scaleX(0);
+}
+
+.itemsview figure:after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    bottom: 5%;
+    left: 5%;
+    border-right: solid 2px;
+    border-left: solid 2px;
+    transition: 0.2s;
+    transform: scaleY(0);
+}
+
+.itemsview figure:hover { box-shadow: 0 0 0 128px rgba(0, 0, 0, 0.4) inset; }
+
+.itemsview figure:hover:before,
+.itemsview figure:hover:after 
+{
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.itemsview figure:hover h5,
+.itemsview figure:hover p{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
