@@ -185,7 +185,8 @@ header {
     height: 200px;
     padding: 1rem;
     border-radius: 2px;
-    background: #007f91 no-repeat center;
+    background: url(../img/items/cpu.svg) no-repeat;
+    background-size: contain;
     box-shadow: 0 0 0 128px rgba(0, 0, 0, 0.1) inset;
     display: flex;
     justify-content: center;
@@ -248,3 +249,126 @@ header {
     opacity: 1;
     visibility: visible;
 }
+
+/* Item Card design */
+.item-card {
+    width: 250px;
+    height: 250px;
+    /* margin: 1rem; */
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.ic-front,
+.ic-back {
+    background-size: cover;
+    background-position: center;
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1); 
+    backface-visibility: hidden;
+    text-align: center;
+    min-height: 250px;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.ic-front { color: #406142; background: url(../img/items/cpu.svg); background-size: contain; }
+
+.ic-back{
+    /*background: linear-gradient(45deg,  #7aa57d 0%,#406142 100%); */
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: url(../img/items/cpu-back.svg); 
+    background-size: contain;
+}
+
+.ic-front:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .0;
+    background-color: #000;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.item-card:hover .ic-front,
+.item-card:hover .ic-back{
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.ic-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.item-card .inner{
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    perspective: inherit;
+    z-index: 2;
+}
+
+.item-card .ic-back{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
+
+.item-card .ic-front{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+
+.item-card:hover .ic-back{
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+
+.item-card:hover .ic-front{
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+}
+
+.ic-front .inner p{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-right: 0.6rem;
+    position: relative;
+}
+
+.ic-front .inner p:after{
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #406142;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-right: 0.6rem;
+    bottom: -.75rem;
+}
+
+.ic-front .inner span{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    padding-right: 0.6rem;
+} 
