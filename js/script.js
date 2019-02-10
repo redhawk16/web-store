@@ -38,6 +38,6 @@ $(document).ready(function(){
 });
 
 /* Item select */
-function select_item() {
+function selected_item() {
 	alert("Аня крокусяга!");
 }

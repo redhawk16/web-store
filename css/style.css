@@ -184,6 +184,7 @@ header {
     width: 200px;
     height: 200px;
     padding: 1rem;
+    border-radius: 2px;
     background: #007f91 no-repeat center;
     box-shadow: 0 0 0 128px rgba(0, 0, 0, 0.1) inset;
     display: flex;
@@ -242,7 +243,7 @@ header {
 }
 
 .itemsview figure:hover h5,
-.itemsview figure:hover p{
+.itemsview figure:hover p {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
