@@ -1,8 +1,10 @@
 $primary: #019fb6
 $accent: #3d8c42
+$dwhite: #f7f7f7
 
 body
-    background-color: #efefef
+	background-color: #e5e5e5
+	font-family: 'Roboto', sans-serif
 
 header
 	width: 100%
@@ -10,19 +12,13 @@ header
 	margin-bottom: 2rem
 
 .container
-	background-color: #f7f7f7
-	box-shadow: 0 0 10px rgba(230, 230, 230, 0.3)
+	background-color: $dwhite
+	box-shadow: 0 0 10px rgba(230, 230, 230, .1)
 	padding: 10px 20px
+	margin-bottom: 2rem
 
-<<<<<<< HEAD
-=======
-@media (min-width: 1200px)
-	.container
-		max-width: 1300px
-
->>>>>>> 39dd1b7a1039b8378e406dca09fb403d0b578538
 .header
-	background-color: #fffdfc
+	background-color: $dwhite
 	width: 100%
 	height: 70px
 	padding: 0px
@@ -49,74 +45,53 @@ header
 	width: auto
 	height: 100%
 
-<<<<<<< HEAD
-=======
-	a
-		text-decoration: none
-		color: black
-		display: inline-block
-		padding: .75rem 1rem
-		transition: all .4s ease
-
-		&:hover
-			color: $accent
-
->>>>>>> 39dd1b7a1039b8378e406dca09fb403d0b578538
 	li
 		margin-top: 0.2rem
 		list-style: none
 		display: inline
-		font-family: Verdana
 		text-transform: uppercase
 
-<<<<<<< HEAD
 		a
 			text-decoration: none
 			color: black
 			display: inline-block
 			padding: .75rem 1rem
-			transition: all .4s ease
+			transition: all .2s ease
 
-		&:nth-child(1) a:hover
+		a:hover
 			color: $accent
+		// &:nth-child(1) a:hover
+		//	color: $accent
 
-		&:nth-child(2) a:hover
-			color: #9224f9
+		// &:nth-child(2) a:hover
+		// 	color: #9224f9
 
-		&:nth-child(3) a:hover
-			color: #24cef9
+		// &:nth-child(3) a:hover
+		// 	color: #24cef9
 
-		&:nth-child(4) a:hover
-			color: #dbd300
+		// &:nth-child(4) a:hover
+		// 	color: #dbd300
 
-=======
->>>>>>> 39dd1b7a1039b8378e406dca09fb403d0b578538
 		&:after
 			display: block
 			content: ''
 			padding-bottom: 0.7rem
-<<<<<<< HEAD
-			transform: scaleX(0)
-			transition: transform 250ms ease-in-out
-
-		&:nth-of-type(1):after
-			border-bottom: solid 3px $accent
-
-		&:nth-of-type(2):after
-			border-bottom: solid 3px #9224f9
-
-		&:nth-of-type(3):after
-			border-bottom: solid 3px #24cef9
-
-		&:nth-of-type(4):after
-			border-bottom: solid 3px #fff602
-
-=======
 			border-bottom: solid 3px $accent
 			transform: scaleX(0)
 			transition: transform 250ms ease-in-out
 
->>>>>>> 39dd1b7a1039b8378e406dca09fb403d0b578538
+		// &:nth-of-type(1):after
+		// 	border-bottom: solid 3px $accent
+
+		// &:nth-of-type(2):after
+		// 	border-bottom: solid 3px #9224f9
+
+		// &:nth-of-type(3):after
+		// 	border-bottom: solid 3px #24cef9
+
+		// &:nth-of-type(4):after
+		// 	border-bottom: solid 3px #fff602
+
 	& li:hover:after, .active:after
 		transform: scaleX(1)
 
@@ -130,6 +105,7 @@ header
 		display: block
 		text-decoration: none
 		color: #353535
+		transition: all ease .2s
 
 	.fas
 		padding-right: 0.3rem
@@ -148,11 +124,7 @@ header
 	object-fit: cover
 
 
-<<<<<<< HEAD
 /* catalog.php */
-=======
-/* catalog.html */
->>>>>>> 39dd1b7a1039b8378e406dca09fb403d0b578538
 
 /* Item Card design */
 .item-card
@@ -282,15 +254,152 @@ header
 			margin-top: .3rem
 			width: 100%
 
-		.item-price
+		.item-price .price-div
 			font-size: 18px
 			font-weight: 600
-			p
-				margin: .3rem .2rem
+			margin-top: .5rem
+			border: 1px solid transparent
+			border-radius: .25rem
+			display: inline-flex
+			align-items: center
+			text-align: center
+			width: 100%
+			height: 2rem
+			color: white
 
-				span
-<<<<<<< HEAD
-					margin-left: .5rem
+			.price-p
+				line-height: 1.75rem
+				margin: 0
+				width: 70%
+				height: 100%
+				background-color: #3d8c42
+
+			.fas
+				border-right: 1px solid transparent
+				border-radius: .25rem 0 0 .25rem
+				line-height: 1.75rem
+				width: calc(30%/2)
+				background-color: #343a40
+				height: 100%
+
+			.fa-question
+				cursor: pointer
+				border-right: 1px solid transparent
+				border-radius: 0 .25rem .25rem 0
+				transition: all ease .5s
+
+				&:hover
+					background-color: #23272b
+
+footer
+	.footer-md
+		display: flex
+		justify-content: center
+		align-items: center
+		text-align: center
+		width: 100%
+		height: 25rem
+		color: #a3a3a3
+		background-color: #232d35
+		padding: .5rem 1rem
+			
+		.map
+			width: 50%
+			height: 95%
+
+		.footer-info
+			padding: .5rem 2rem .5rem .5rem
+			color: #c8cacc
+			width: 50%
+			height: 100%
+			text-align: left
+			
+			.footer-left
+				float: left
+				width: 30%
+
+				.logo
+					width: 100%
+					margin-bottom: 2rem
+
+					img
+						width: 5rem
+						height: auto
+				
+				.li-main
+					text-align: center
+					padding-bottom: .5rem
+					text-transform: uppercase
+
+					&:after
+						display: flex
+						content: ''
+						padding-bottom: 0.1rem
+						border-bottom: solid 2px #c8cacc
+						margin: 0 auto
+						width: 60%
+
+				li
+					list-style: none
+					text-align: center
+					font-size: 1.1rem
+
+					a
+						text-decoration: none
+						color: #c8cacc
+						transition: color ease .3s
+
+						&:hover
+							color: #f2f2f2
+
+			.footer-right
+				display: grid
+				float: right
+				width: 70%
+				height: 100%
+				justify-content: center
+				border-left: 1px solid rgba(#c8cacc, .1)
+
+				.about-firm
+					p
+						margin: 0
+
+					.phone, .email
+						text-decoration: none
+						color: #c8cacc
+
+					.fas
+						padding-right: .5rem
+
+				.hours-work
+					p
+						margin: 4rem 0
+
+				.follow-us
+					p
+						margin-bottom: 0
+						
+					.fab
+						cursor: pointer
+						margin-right: 1rem
+						font-size: 1.5rem
+						transition: color ease .3s
+
+						&:hover
+							color: #4a76a8
+
+	.footer-bt
+		display: flex
+		justify-content: center
+		width: 100%
+		height: 3rem
+		color: #a3a3a3
+		background-color: #131b21
+		align-items: center
+		text-align: center
+
+		p
+			margin: 0
 
 /* Media query */
 @media (min-width: 1300px)
@@ -304,6 +413,3 @@ header
 @media (min-width: 1500px)
 	.container
 		max-width: 1400px
-=======
-					margin-left: .5rem
->>>>>>> 39dd1b7a1039b8378e406dca09fb403d0b578538
