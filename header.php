@@ -3,7 +3,7 @@
 		<title>WEB - Витрина</title>
 		<link rel="icon" href="assets/img/logo.png" type="image/png">
 
-		<link href="css/libs.min.css" rel="stylesheet">
+		<link href="css/min/libs.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 
 		<script src="js/libs.min.js"></script>
