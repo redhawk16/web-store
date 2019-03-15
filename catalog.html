@@ -8,8 +8,8 @@
 		<link href="css/min/libs.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 
-		<script src="js/libs.min.js"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?apikey=b4c8f470-ee66-4d3f-9a05-b627095fabdb&lang=ru_RU" type="text/javascript"></script>
+		<script src="js/libs.min.js"></script>		
 		<script async src="js/common.js"></script>	
     </script>
 	</head>
@@ -35,100 +35,78 @@
 			</div>
 		</header>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 items">
+		<div class="box">
+			<aside id="sidebar" class="sidebar">
+				<div class="aheader">
+					<p class="filter">Фильтр</p>
+				</div>
+				<!-- /.aheader -->
+				<div class="acpu">
+					<p class="article">Процессоры</p>
+						<label class="element">
+							<input type="checkbox" class="checkbox" name="i9" value="Intel Core i9">
+							Intel Core i9
+						</label>
+				</div>
+				<!-- /.aproc -->	
+				<div class="agen">
+					<p class="article">Поколение</p>
+					<label class="element">
+							<input type="checkbox" class="checkbox" name="Sandy Bridge" value="Sandy Bridge">
+							Sandy Bridge
+					</label>
+				</div>
+				<!-- /.agen -->
+				<div class="afooter">
+					<button type="button" id="btn-reset" class="btn btn-dark btn-reset">Сбросить</button>
+					<button type="button" id="btn-confirm" class="btn btn-confirm">Применить</button>
+				</div>
+				<!-- /.afooter -->	
+			</aside>
+			<!-- /.sidebar -->
 
-					<div class="item-info">
-						<div class="item-card">
-							<div class="ic-front">
-								<div class="inner">
-									<p>Intel Core i7</p>
-				      				<span>4770k Haswell</span>
-								</div>
-							</div>
-							<div class="ic-back">
-								<div class="inner">
-								  <p>4-ядерный процессор, Socket LGA1150<br>
-									частота 3500 МГц<br>
-									объем кэша L2/L3: 1024 КБ/8192 КБ<br>
-									ядро Haswell (2013)<br>
-									техпроцесс 22 нм</p>
-								</div>
+			<div class="items">
+				<div class="item-info">
+					<div class="item-card">
+						<div class="ic-front">
+							<div class="inner">
+								<p>Intel Core i7</p>
+										<span>4770k Haswell</span>
 							</div>
 						</div>
-						<div class=item-price>
-							<div class="price-div">
-								<i class="fas fa-shopping-cart"></i>
-								<p class="price-p">12000 руб.</p>
-								<i onclick="about_item()" class="fas fa-question"></i>
+						<div class="ic-back">
+							<div class="inner">
+								<p>4-ядерный процессор, Socket LGA1150<br>
+								частота 3500 МГц<br>
+								объем кэша L2/L3: 1024 КБ/8192 КБ<br>
+								ядро Haswell (2013)<br>
+								техпроцесс 22 нм</p>
 							</div>
-							<button type="button" class="btn btn-dark btn-cust" data-toggle="modal" data-target="#ModalBuyItem">Купить</button>
-
-							<!-- Modal About Item -->
-							<div class="modal fade" id="ModalAboutItem" tabindex="-1" role="dialog" aria-labelledby="ModalAboutItem" aria-hidden="true">
-							  <div class="modal-dialog modal-dialog-centered" role="document">
-							    <div class="modal-content">
-							      <div class="modal-header">
-							        <h5 class="modal-title" id="ModalAboutItem">Название товара</h5>
-							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							          <span aria-hidden="true">&times;</span>
-							        </button>
-							      </div>
-							      <div class="modal-body">
-							        <p>Описание товара<br>Тех. характеристики<br>Цена</p>
-							      </div>
-							      <div class="modal-footer">
-							        <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
-							      </div>
-							    </div>
-							  </div>
-							</div>
-
-							<!-- Modal Buy Item -->
-							<div class="modal fade" id="ModalBuyItem" tabindex="-1" role="dialog" aria-labelledby="ModalBuyItem" aria-hidden="true">
-							  <div class="modal-dialog modal-dialog-centered" role="document">
-							    <div class="modal-content">
-							      <div class="modal-header">
-							        <h5 class="modal-title" id="ModalBuyItem">Оформление заказа</h5>
-							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							          <span aria-hidden="true">&times;</span>
-							        </button>
-							      </div>
-								  <form action="">
-								    	<div class="modal-body">
-									        <div class="form-group row">
-									            <label for="recipient-name" class="col-sm-4 col-form-label">Ваше Имя:</label>
-									            <div class="col-sm-8"><input type="text" class="form-control" id="recipient-name"required></div>
-								        	</div>
-											<div class="form-group row">
-									            <label for="recipient-surname" class="col-sm-4 col-form-label">Ваша Фамилия:</label>
-									            <div class="col-sm-8"><input type="text" class="form-control" id="recipient-surnamename" required></div>
-									        </div>
-											<div class="form-group row">
-								            <label for="email-text" class="col-sm-4 col-form-label">Ваш email:</label>
-								            <div class="col-sm-8"><input type="text" class="form-control" id="email-text" required></input></div>
-								            </div>
-								        </div>
-								      <div class="modal-footer">
-								        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-								        <button type="submit" class="btn btn-primary">Оформить</button>
-								      </div>
-							      </form>
-							    </div>
-							  </div>
-							</div>
-						</div>	
+						</div>
+					</div>
+					<div class=item-price>
+						<div class="price-div">
+							<i class="fas fa-shopping-cart"></i>
+							<p class="price-p">12000 руб.</p>
+							<i onclick="about_item()" class="fas fa-question"></i>
+						</div>
+						<button type="button" class="btn btn-dark btn-cust" data-toggle="modal" data-target="#ModalBuyItem">Оформить</button>
 					</div>	
-					
 				</div>
+				<!-- /.item-info -->	
+
+				<div class="pagination">
+					<p>1</p>
+				</div>
+				<!-- /.pagination -->				
 			</div>
+			<!-- /.items -->
 		</div>
 
 		<footer>
-			<div class="footer-md">
-				<div class="footer-info">
-					<div class="footer-left">
+			<div class="footer">
+				<div class="footer__left">
+					<div class="footer__sitemap">
 						<div class="logo"><img src="assets/img/logo.png" align="middle" alt="Logo"></div>
 						<ul style="padding-left: 0px;">
 							<li class="li-main">Карта Сайта</li>
@@ -138,7 +116,8 @@
 							<li><a href="#ABOUT">О нас</a></li>
 						</ul>
 					</div>
-					<div class="footer-right">
+					<div class="footer__devider"></div>
+					<div class="footer__info">
 						<div class="about-firm">
 							<p><i class="fas fa-map-marker-alt"></i>Млечный Путь, Солнечная система, планета Земля,<br> Российская Федерация, Омская область, город Омск</p>
 							<a class="phone" href="tel:89994574862"><i class="fas fa-mobile"></i>8 (999) 457 48-62</a><br>
@@ -157,13 +136,69 @@
 						</div>						
 					</div>
 				</div>
-				<div class="map" id="map"></div>
+				<div class="footer__map" id="map"></div>
 			</div>			
-			<div class="footer-bt">
+			<div class="footer-botton">
 				<p class="copyright">Copyright © 2019 Web-Store. All rights reserved.</p>
 			</div>
 		</footer>
 	</body>
+
+
+	<!-- Modal About Item -->
+	<div class="modal fade" id="ModalAboutItem" tabindex="-1" role="dialog" aria-labelledby="ModalAboutItem" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="ModalAboutItem">Название товара</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Описание товара<br>Тех. характеристики<br>Цена</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Buy Item -->
+		<div class="modal fade" id="ModalBuyItem" tabindex="-1" role="dialog" aria-labelledby="ModalBuyItem" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="ModalBuyItem">Оформление заказа</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				<form action="">
+						<div class="modal-body">
+								<div class="form-group row">
+										<label for="recipient-name" class="col-sm-4 col-form-label">Ваше Имя:</label>
+										<div class="col-sm-8"><input type="text" class="form-control" id="recipient-name"required></div>
+								</div>
+						<div class="form-group row">
+										<label for="recipient-surname" class="col-sm-4 col-form-label">Ваша Фамилия:</label>
+										<div class="col-sm-8"><input type="text" class="form-control" id="recipient-surnamename" required></div>
+								</div>
+						<div class="form-group row">
+									<label for="email-text" class="col-sm-4 col-form-label">Ваш email:</label>
+									<div class="col-sm-8"><input type="text" class="form-control" id="email-text" required></input></div>
+									</div>
+							</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
+							<button type="submit" class="btn btn-primary">Оформить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	<!-- Modal's End -->	
 </html>
 
 
