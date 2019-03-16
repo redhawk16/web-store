@@ -1,111 +1,93 @@
+<?php include('./includes/connect.php'); ?>
+
 <!DOCTYPE HTML>
 <html>
-	<? include_once 'header.php' ?>
+	<?php include_once('./includes/header.php'); ?>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 items">
-				<?php
-				$host = 'localhost';  // Хост, у нас все локально
-				$user = 'u999451g_bd';    // Имя созданного вами пользователя
-				$pass = '1aGSa6De'; // Установленный вами пароль пользователю
-				$db_name = 'u999451g_bd';   // Имя базы данных
-				$link = mysqli_connect($host, $user, $pass, $db_name); // Соединяемся с базой
-
-				// Ругаемся, если соединение установить не удалось
-				if (!$link) {
-					echo 'Не могу соединиться с БД. Код ошибки: ' . mysqli_connect_errno() . ', ошибка: ' . mysqli_connect_error();
-					exit;
-				}
-
-				$query ="SELECT name, model, description, ammount, price FROM store";
-				$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
-				if($result) {
-					while ($row = mysqli_fetch_row($result)) { echo
-					"<div class=\"item-info\">
-						<div class=\"item-card\">
-							<div class=\"ic-front\">
-								<div class=\"inner\">
-									<p>$row[0]</p>
-				      				<span>$row[1]</span>
-								</div>
-							</div>
-							<div class=\"ic-back\">
-								<div class=\"inner\">
-								  <p>$row[2]</p>
-								</div>
-							</div>
-						</div>
-						<div class=\"item-price\">
-							<div class=\"price-div\">
-								<i class=\"fas fa-shopping-cart\"></i>
-								<p class=\"price-p\">$row[4] руб.</p>
-								<i onclick=\"about_item()\" class=\"fas fa-question\"></i>
-							</div>
-							<button type=\"button\" class=\"btn btn-dark btn-cust\" data-toggle=\"modal\" data-target=\"#ModalBuyItem\">Купить</button>
-						</div>	
-					</div>";
-					} } ?>
+		<div class="box">
+			<aside id="sidebar" class="sidebar">
+				<div class="aheader">
+					<p class="filter">Фильтр</p>
 				</div>
+				<!-- /.aheader -->
+				<div class="acpu">
+					<p class="article">Процессоры</p>
+					<?php
+						$cpus = $connect->query('SELECT * FROM store GROUP BY name DESC');
+						if($cpus) { foreach ($cpus as $cpu) { ?>
+						<label class="checkbox-label">
+							<input type="checkbox" class="checkbox" name="i9" value="<?="{$cpu['name']}"?>">
+							<span class="checkmark"></span>
+							<?="{$cpu['name']}"?>
+						</label>
+						<?php } } ?>
+				</div>
+				<!-- /.aproc -->	
+				<div class="agen">
+					<p class="article">Поколение</p>
+					<?php
+						$gens = $connect->query('SELECT * FROM store GROUP BY model');
+						if($gens) { foreach ($gens as $gen) { ?>
+						<label class="checkbox-label">
+							<input type="checkbox" class="checkbox" name="<?="{$gen['model']}"?>" value="<?="{$gen['model']}"?>">
+							<span class="checkmark"></span>
+							<?="{$gen['model']}"?>
+						</label>
+					<?php } } ?>
+				</div>
+				<!-- /.agen -->
+				<div class="afooter">
+					<button type="button" id="btn-reset" class="btn btn-dark btn-reset">Сбросить</button>
+					<button type="button" id="btn-confirm" class="btn btn-confirm">Применить</button>
+				</div>
+				<!-- /.afooter -->	
+			</aside>
+			<!-- /.sidebar -->
+
+			<div class="content">
+				<div class="items">
+					<?php
+						$items = $connect->query('SELECT * FROM store');
+						if($items) { foreach ($items as $item) { ?>
+						<div class="item-info">
+							<div class="item-card">
+								<div class="ic-front">
+									<div class="inner">
+										<p><?="{$item['name']}" ?></p>
+												<span><?="{$item['model']}" ?></span>
+									</div>
+								</div>
+								<div class="ic-back">
+									<div class="inner">
+										<p><?="{$item['description']}" ?></p>
+									</div>
+								</div>
+							</div>
+							<div class=item-price>
+								<div class="price-div">
+									<i class="fas fa-shopping-cart"></i>
+									<p class="price-p"><?="{$item['price']}" ?> руб.</p>
+									<i onclick="about_item()" class="fas fa-question"></i>
+								</div>
+								<button type="button" class="btn btn-dark btn-cust" data-toggle="modal" data-target="#ModalBuyItem">Оформить</button>
+							</div>	
+						</div>
+					<?php } } ?>
+				</div>
+				<!-- /.items -->	
+
+				<div class="pagination">
+					<a href="" class="pagination__number pagination__number-active">1</a>
+					<a href="" class="pagination__number">2</a>
+				</div>
+				<!-- /.pagination -->	
 			</div>
+			<!-- /.content -->
 		</div>
 
-		<? include_once 'footer.php' ?>
-
-
-
-		<!-- Modal About Item -->
-		<div class="modal fade" id="ModalAboutItem" tabindex="-1" role="dialog" aria-labelledby="ModalAboutItem" aria-hidden="true">
-		  <div class="modal-dialog modal-dialog-centered" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="ModalAboutItem">Название товара</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body">
-		        <p>Описание товара<br>Тех. характеристики<br>Цена</p>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-
-		<!-- Modal Buy Item -->
-		<div class="modal fade" id="ModalBuyItem" tabindex="-1" role="dialog" aria-labelledby="ModalBuyItem" aria-hidden="true">
-		  <div class="modal-dialog modal-dialog-centered" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="ModalBuyItem">Оформление заказа</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-			  <form action="">
-			    	<div class="modal-body">
-				        <div class="form-group row">
-				            <label for="recipient-name" class="col-sm-4 col-form-label">Ваше Имя:</label>
-				            <div class="col-sm-8"><input type="text" class="form-control" id="recipient-name"required></div>
-			        	</div>
-						<div class="form-group row">
-				            <label for="recipient-surname" class="col-sm-4 col-form-label">Ваша Фамилия:</label>
-				            <div class="col-sm-8"><input type="text" class="form-control" id="recipient-surnamename" required></div>
-				        </div>
-						<div class="form-group row">
-			            <label for="email-text" class="col-sm-4 col-form-label">Ваш email:</label>
-			            <div class="col-sm-8"><input type="text" class="form-control" id="email-text" required></input></div>
-			            </div>
-			        </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
-			        <button type="submit" class="btn btn-primary">Оформить</button>
-			      </div>
-		      </form>
-		    </div>
-		  </div>
-		</div>		
+		<?php include_once('./includes/footer.php'); ?>
 	</body>
+
+	<?php include('./includes/modal_buy.php'); ?>
+	<?php include('./includes/modal_about.php'); ?>
 </html>

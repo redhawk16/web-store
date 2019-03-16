@@ -177,7 +177,7 @@ header
 				display: none
 
 				&:checked ~ .checkmark
-					background-color: green
+					background-color: #53995b
 			
 			.checkmark
 				width: 1.1rem
@@ -259,8 +259,23 @@ header
 							&:hover
 								background-color: #23272b
 		.pagination
+			border-top: solid 1px rgba(#5b5b5b, .1)
 			justify-content: center
 
+			&__number
+				width: 30px
+				height: 30px
+				text-align: center
+				line-height: 1.75rem
+				border-radius: 50%
+				margin: .3rem .2rem
+				text-decoration: none
+				color: rgba(#494c4f, .5)
+				transition: color, background-color .2s linear
+
+				&:hover, &-active
+					color: black
+					background: rgba(0,0,0,.1)
 /* catalog.php */
 
 /* Item Card design */

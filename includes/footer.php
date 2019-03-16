@@ -1,7 +1,7 @@
 <footer>
-	<div class="footer-md">
-		<div class="footer-info">
-			<div class="footer-left">
+	<div class="footer">
+		<div class="footer__left">
+			<div class="footer__sitemap">
 				<div class="logo"><img src="assets/img/logo.png" align="middle" alt="Logo"></div>
 				<ul style="padding-left: 0px;">
 					<li class="li-main">Карта Сайта</li>
@@ -11,7 +11,8 @@
 					<li><a href="#ABOUT">О нас</a></li>
 				</ul>
 			</div>
-			<div class="footer-right">
+			<div class="footer__devider"></div>
+			<div class="footer__info">
 				<div class="about-firm">
 					<p><i class="fas fa-map-marker-alt"></i>Млечный Путь, Солнечная система, планета Земля,<br> Российская Федерация, Омская область, город Омск</p>
 					<a class="phone" href="tel:89994574862"><i class="fas fa-mobile"></i>8 (999) 457 48-62</a><br>
@@ -30,9 +31,9 @@
 				</div>						
 			</div>
 		</div>
-		<div class="map" id="map"></div>
+		<div class="footer__map" id="map"></div>
 	</div>			
-	<div class="footer-bt">
+	<div class="footer-botton">
 		<p class="copyright">Copyright © 2019 Web-Store. All rights reserved.</p>
 	</div>
 </footer>

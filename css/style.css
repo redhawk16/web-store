@@ -200,7 +200,7 @@ header .d-block {
 }
 
 .box .sidebar .checkbox-label input:checked ~ .checkmark {
-  background-color: green;
+  background-color: #53995b;
 }
 
 .box .sidebar .checkbox-label .checkmark {
@@ -315,9 +315,28 @@ header .d-block {
 }
 
 .box .content .pagination {
+  border-top: solid 1px rgba(91, 91, 91, 0.1);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.box .content .pagination__number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.75rem;
+  border-radius: 50%;
+  margin: .3rem .2rem;
+  text-decoration: none;
+  color: rgba(73, 76, 79, 0.5);
+  -webkit-transition: color, background-color .2s linear;
+  transition: color, background-color .2s linear;
+}
+
+.box .content .pagination__number:hover, .box .content .pagination__number-active {
+  color: black;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /* catalog.php */
