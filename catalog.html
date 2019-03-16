@@ -43,17 +43,19 @@
 				<!-- /.aheader -->
 				<div class="acpu">
 					<p class="article">Процессоры</p>
-						<label class="element">
-							<input type="checkbox" class="checkbox" name="i9" value="Intel Core i9">
-							Intel Core i9
-						</label>
+					<label class="checkbox-label">
+						<input type="checkbox" class="checkbox" name="i9" value="Intel Core i9">
+						<span class="checkmark"></span>
+						Intel Core i9
+					</label>
 				</div>
 				<!-- /.aproc -->	
 				<div class="agen">
 					<p class="article">Поколение</p>
-					<label class="element">
-							<input type="checkbox" class="checkbox" name="Sandy Bridge" value="Sandy Bridge">
-							Sandy Bridge
+					<label class="checkbox-label">
+						<input type="checkbox" class="checkbox" name="Sandy Bridge" value="Sandy Bridge">
+						<span class="checkmark"></span>
+						Sandy Bridge
 					</label>
 				</div>
 				<!-- /.agen -->
@@ -65,42 +67,44 @@
 			</aside>
 			<!-- /.sidebar -->
 
-			<div class="items">
-				<div class="item-info">
-					<div class="item-card">
-						<div class="ic-front">
-							<div class="inner">
-								<p>Intel Core i7</p>
-										<span>4770k Haswell</span>
+			<div class="content">
+				<div class="items">
+					<div class="item-info">
+						<div class="item-card">
+							<div class="ic-front">
+								<div class="inner">
+									<p>Intel Core i7</p>
+											<span>4770k Haswell</span>
+								</div>
+							</div>
+							<div class="ic-back">
+								<div class="inner">
+									<p>4-ядерный процессор, Socket LGA1150<br>
+									частота 3500 МГц<br>
+									объем кэша L2/L3: 1024 КБ/8192 КБ<br>
+									ядро Haswell (2013)<br>
+									техпроцесс 22 нм</p>
+								</div>
 							</div>
 						</div>
-						<div class="ic-back">
-							<div class="inner">
-								<p>4-ядерный процессор, Socket LGA1150<br>
-								частота 3500 МГц<br>
-								объем кэша L2/L3: 1024 КБ/8192 КБ<br>
-								ядро Haswell (2013)<br>
-								техпроцесс 22 нм</p>
+						<div class=item-price>
+							<div class="price-div">
+								<i class="fas fa-shopping-cart"></i>
+								<p class="price-p">12000 руб.</p>
+								<i onclick="about_item()" class="fas fa-question"></i>
 							</div>
-						</div>
+							<button type="button" class="btn btn-dark btn-cust" data-toggle="modal" data-target="#ModalBuyItem">Оформить</button>
+						</div>	
 					</div>
-					<div class=item-price>
-						<div class="price-div">
-							<i class="fas fa-shopping-cart"></i>
-							<p class="price-p">12000 руб.</p>
-							<i onclick="about_item()" class="fas fa-question"></i>
-						</div>
-						<button type="button" class="btn btn-dark btn-cust" data-toggle="modal" data-target="#ModalBuyItem">Оформить</button>
-					</div>	
 				</div>
-				<!-- /.item-info -->	
+				<!-- /.items -->	
 
 				<div class="pagination">
 					<p>1</p>
 				</div>
-				<!-- /.pagination -->				
+				<!-- /.pagination -->	
 			</div>
-			<!-- /.items -->
+			<!-- /.content -->
 		</div>
 
 		<footer>
