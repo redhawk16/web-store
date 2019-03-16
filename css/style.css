@@ -135,9 +135,6 @@ header .d-block {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   min-width: 250px;
   background-color: #232d35;
   color: #c8cacc;
@@ -146,7 +143,6 @@ header .d-block {
 .box .sidebar .aheader {
   text-align: center;
   padding-top: .5rem;
-  padding-bottom: .5rem;
 }
 
 .box .sidebar .aheader .filter {
@@ -165,13 +161,16 @@ header .d-block {
 }
 
 .box .sidebar .acpu {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
 .box .sidebar .agen {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   margin-bottom: 1rem;
 }
 
@@ -212,6 +211,9 @@ header .d-block {
 }
 
 .box .sidebar .afooter {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   text-align: center;
   padding-top: .5rem;
   padding-bottom: .5rem;
