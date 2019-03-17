@@ -1,26 +1,28 @@
 $(document).ready(function(){
-/*	NavBar fix	*/
-var navbar = document.getElementById("nav");
-var nav = navbar.getElementsByClassName("menu");
+	/*	NavBar fix	*/
+	let navbar = document.getElementById("nav");
+	let menu = navbar.getElementsByClassName("menu");
+	let link = navbar.getElementsByClassName("menu__link");
 
-/* Add class .active to current web-page */
-/*Получаем адрес текущей страницы и отрезаем все лишнее
-По циклу пробегаем все меню до совпадения адреса
-Присваимаем найденому элементу меню класс .active*/
+	menu_link();
 
-for (var i = 0; i < nav.length; i++) {
-	nav[i].addEventListener("mouseover", function() {
-		var current = document.getElementsByClassName("active");
-		current[0].className = current[0].className.replace(" active", " noactive");
-	});
-}
+	function menu_link() {
+		let path = window.location.href;
+		for(let i = 0; i < link.length; i++) {
+			if(link[i].href == path) { menu[i].classList.toggle('menu__active'); }
+		}
+	}
 
-for (var i = 0; i < nav.length; i++) {
-	nav[i].addEventListener("mouseout", function() {
-		var current = document.getElementsByClassName("noactive");
-		current[0].className = current[0].className.replace(" noactive", " active");
-	});
-}
+	for (let i = 0; i < menu.length; i++) {
+		menu[i].addEventListener("mouseenter", function() {
+			let current = document.getElementsByClassName('menu__active');
+			current[0].classList.toggle('menu__active');
+		});
+
+		menu[i].addEventListener("mouseleave", function(){
+			menu_link();
+		});
+	}
 
 });
 

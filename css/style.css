@@ -43,14 +43,14 @@ header .nav {
   height: 100%;
 }
 
-header .nav li {
+header .nav .menu {
   margin-top: 0.2rem;
   list-style: none;
   display: inline;
   text-transform: uppercase;
 }
 
-header .nav li a {
+header .nav .menu__link {
   text-decoration: none;
   color: #eaeaea;
   display: inline-block;
@@ -59,11 +59,11 @@ header .nav li a {
   transition: all .2s ease;
 }
 
-header .nav li a:hover {
+header .nav .menu__link:hover {
   color: #61b766;
 }
 
-header .nav li:after {
+header .nav .menu:after {
   display: block;
   content: '';
   padding-bottom: 0.7rem;
@@ -76,7 +76,7 @@ header .nav li:after {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
-header .nav li:hover:after, header .nav .active:after {
+header .nav li:hover:after, header .nav .menu__active:after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }

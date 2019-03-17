@@ -9,7 +9,6 @@
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=b4c8f470-ee66-4d3f-9a05-b627095fabdb&lang=ru_RU" type="text/javascript"></script>
 	<script src="js/libs.min.js"></script>		
 	<script async src="js/common.js"></script>	
-	</script>
 </head>
 
 <body>
@@ -19,10 +18,10 @@
 				<div class="logo"><a href="/"><img src="assets/img/logo.png" width="auto" height="100%" align="middle" alt="Logo" title="На главную"></a></div>
 				<nav id="nav" class="nav">
 					<ul style="padding-left: 0px;">
-						<li class="menu"><a href="index.php">Главная</a></li>
-						<li class="menu"><a href="catalog.php?page=1">Каталог</a></li>
-						<li class="menu"><a href="#CONTACT">Контакты</a></li>
-						<li class="menu"><a href="#ABOUT">О нас</a></li>
+						<li class="menu"><a class="menu__link" href="index.php">Главная</a></li>
+						<li class="menu"><a class="menu__link" href="catalog.php?page=1">Каталог</a></li>
+						<li class="menu"><a class="menu__link" href="#CONTACT">Контакты</a></li>
+						<li class="menu"><a class="menu__link" href="#ABOUT">О нас</a></li>
 					</ul>	
 				</nav>
 				<div class="info">

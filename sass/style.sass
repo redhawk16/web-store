@@ -42,32 +42,32 @@ header
 		width: auto
 		height: 100%
 
-		li
+		.menu
 			margin-top: 0.2rem
 			list-style: none
 			display: inline
 			text-transform: uppercase
 
-			a
+			&__link
 				text-decoration: none
 				color: #eaeaea
 				display: inline-block
 				padding: .75rem 1rem
 				transition: all .2s ease
 
-			a:hover
-				color: $accent
-			// &:nth-child(1) a:hover
-			//	color: $accent
+				&:hover
+					color: $accent
+				// &:nth-child(1) a:hover
+				//	color: $accent
 
-			// &:nth-child(2) a:hover
-			// 	color: #9224f9
+				// &:nth-child(2) a:hover
+				// 	color: #9224f9
 
-			// &:nth-child(3) a:hover
-			// 	color: #24cef9
+				// &:nth-child(3) a:hover
+				// 	color: #24cef9
 
-			// &:nth-child(4) a:hover
-			// 	color: #dbd300
+				// &:nth-child(4) a:hover
+				// 	color: #dbd300
 
 			&:after
 				display: block
@@ -89,7 +89,7 @@ header
 			// &:nth-of-type(4):after
 			// 	border-bottom: solid 3px #fff602
 
-		& li:hover:after, .active:after
+		& li:hover:after, .menu__active:after
 			transform: scaleX(1)
 
 		ul

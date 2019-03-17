@@ -49,7 +49,6 @@
 				<div class="items">
 					<?php
 						$items = $connect->query('SELECT * FROM store');
-						// if($items) { foreach ($items as $item) { 
 						$items_per_page = 8;
 						$number_of_results = mysqli_num_rows($items);
 						$number_of_pages = ceil($number_of_results/$items_per_page);
@@ -89,9 +88,9 @@
 				<!-- /.items -->	
 				
 				<div class="pagination">
-					<?php for($page = 1; $page <= $number_of_pages; $page++) {		
+					<?php for($page = 1; $page <= $number_of_pages; $page++) {
 						if($page == $_GET['page']) { ?>
-						<a href="" class="pagination__number pagination__number-active"><?= $page ?></a> 
+						<a href="catalog.php?page=<?= $page ?>" class="pagination__number pagination__number-active"><?= $page ?></a> 
 						<?php } else { ?> <a href="catalog.php?page=<?= $page ?>" class="pagination__number"><?= $page ?></a> <?php  } ?>
 					<?php } ?>
 				</div>
