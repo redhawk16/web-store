@@ -1,4 +1,5 @@
 <?php include('./includes/connect.php'); ?>
+<?php if($_GET['page'] == 0) { header("Location:catalog.php?page=1"); } ?>
 
 <!DOCTYPE HTML>
 <html>
@@ -53,7 +54,7 @@
 						$number_of_results = mysqli_num_rows($items);
 						$number_of_pages = ceil($number_of_results/$items_per_page);
 						
-						if(!isset($_GET['page'])) { $page = 1; } 
+						if(!isset($_GET['page'])) { $page = 1; }
 						else { $page = $_GET['page']; }
 
 						$this_page_first_result = ($page - 1) * $items_per_page;

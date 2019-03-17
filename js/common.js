@@ -7,9 +7,13 @@ $(document).ready(function(){
 	menu_link();
 
 	function menu_link() {
-		let path = window.location.href;
+
+		let path = window.location.pathname;
+		path = path.substring(path.length - (path.length - 1));
+
+		//let path = window.location.href;
 		for(let i = 0; i < link.length; i++) {
-			if(link[i].href == path) { menu[i].classList.toggle('menu__active'); }
+			if(link[i].getAttribute('href') == path) { menu[i].classList.toggle('menu__active'); }
 		}
 	}
 

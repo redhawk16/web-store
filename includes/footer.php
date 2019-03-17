@@ -5,8 +5,8 @@
 				<div class="logo"><img src="assets/img/logo.png" align="middle" alt="Logo"></div>
 				<ul style="padding-left: 0px;">
 					<li class="li-main">Карта Сайта</li>
-					<li><a href="index.html">Главная</a></li>
-					<li><a href="#CATALOG">Каталог</a></li>
+					<li><a href="index.php">Главная</a></li>
+					<li><a href="catalog.php">Каталог</a></li>
 					<li><a href="#CONTACT">Контакты</a></li>
 					<li><a href="#ABOUT">О нас</a></li>
 				</ul>
