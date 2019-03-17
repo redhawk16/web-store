@@ -20,7 +20,7 @@
 				<nav id="nav" class="nav">
 					<ul style="padding-left: 0px;">
 						<li class="menu"><a href="index.php">Главная</a></li>
-						<li class="menu"><a href="catalog.php">Каталог</a></li>
+						<li class="menu"><a href="catalog.php?page=1">Каталог</a></li>
 						<li class="menu"><a href="#CONTACT">Контакты</a></li>
 						<li class="menu"><a href="#ABOUT">О нас</a></li>
 					</ul>	
