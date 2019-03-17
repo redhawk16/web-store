@@ -3,7 +3,7 @@
 	<title>WEB - Витрина</title>
 	<link rel="icon" href="assets/img/logo.png" type="image/png">
 
-	<link href="css/min/libs.min.css" rel="stylesheet">
+	<link href="css/libs.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=b4c8f470-ee66-4d3f-9a05-b627095fabdb&lang=ru_RU" type="text/javascript"></script>
@@ -20,7 +20,7 @@
 				<nav id="nav" class="nav">
 					<ul style="padding-left: 0px;">
 						<li class="menu"><a href="index.php">Главная</a></li>
-						<li class="menu active"><a href="catalog.php">Каталог</a></li>
+						<li class="menu"><a href="catalog.php">Каталог</a></li>
 						<li class="menu"><a href="#CONTACT">Контакты</a></li>
 						<li class="menu"><a href="#ABOUT">О нас</a></li>
 					</ul>	
@@ -31,4 +31,3 @@
 				</div>
 			</div>
 		</div>
-	</header>

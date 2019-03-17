@@ -6,7 +6,7 @@ var nav = navbar.getElementsByClassName("menu");
 /* Add class .active to current web-page */
 /*Получаем адрес текущей страницы и отрезаем все лишнее
 По циклу пробегаем все меню до совпадения адреса
-Присваимаем найденому элементу меню клас .active*/
+Присваимаем найденому элементу меню класс .active*/
 
 for (var i = 0; i < nav.length; i++) {
 	nav[i].addEventListener("mouseover", function() {
