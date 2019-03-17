@@ -9,11 +9,11 @@ $(document).ready(function(){
 	function menu_link() {
 
 		let path = window.location.pathname;
-		path = path.substring(path.length - (path.length - 1));
+		//path = path.substring(path.length - (path.length - 1));
 
 		//let path = window.location.href;
 		for(let i = 0; i < link.length; i++) {
-			if(link[i].getAttribute('href') == path) { menu[i].classList.toggle('menu__active'); }
+			if(link[i].getAttribute('href') == path.split("/").pop()) { menu[i].classList.toggle('menu__active'); }
 		}
 	}
 
