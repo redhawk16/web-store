@@ -10,9 +10,10 @@
 		$str = strip_tags($_GET['sort_by']);
 		$sort = explode('%', $str);
 
-		include('./includes/items.php');
-
-		exit();
+		if(isset($_GET['noreload'])) {
+			include('./includes/items.php');
+			exit();
+		}
 
 
 

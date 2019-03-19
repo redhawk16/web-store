@@ -35,14 +35,15 @@ $(document).ready(function(){
 		});
 		if(checked != ''){
 			var sort = checked.join('%');
+			var noreload = 'yes';
 			console.log(sort);
 			//$("#fon").css({'display':'block'}); //отключение
 			//$("#load").fadeIn(1000,function () { //anim load
 				$.ajax({
-				url:window.location,
-				data:'sort_by='+sort,
-				type:'GET',
-				success:function (html) {
+				url: window.location,
+				data: 'sort_by='+sort+'&noreload='+noreload,
+				type: 'GET',
+				success: function (html) {
 					$(".content").html(html).hide().fadeIn(1000);
 					//$("#fon").css({'display':'none'});
 					//$("#load").fadeOut(1000);
