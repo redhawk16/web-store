@@ -1,5 +1,24 @@
-<?php include('./includes/connect.php'); ?>
-<?php if($_GET['page'] == 0) { header("Location:catalog.php?page=1"); } ?>
+<?php 
+	include('./includes/connect.php'); 
+	include('./includes/functions.php');
+
+	$connect = get_connect();
+	if($_GET['page'] == 0) { header("Location:catalog.php?page=1"); }
+
+	if(isset($_GET['sort_by'])) {
+		//echo $_GET['sort_by'];
+		$str = strip_tags($_GET['sort_by']);
+		$sort = explode('%', $str);
+
+		include('./includes/items.php');
+
+		exit();
+
+
+
+		
+	} else $sort = [];  // In $sort send array of filtering items; 
+?>
 
 <!DOCTYPE HTML>
 <html>
@@ -15,12 +34,12 @@
 				<div class="acpu">
 					<p class="article">Процессоры</p>
 					<?php
-						$cpus = $connect->query('SELECT * FROM store GROUP BY name DESC');
+						$cpus = $connect->query('SELECT * FROM store GROUP BY model DESC');
 						if($cpus) { foreach ($cpus as $cpu) { ?>
-						<label class="checkbox-label">
-							<input type="checkbox" class="checkbox" name="i9" value="<?="{$cpu['name']}"?>">
+						<label class="checkbox-label <?="{$cpu['model']}"?>">
+							<input type="checkbox" class="checkbox" name="<?="{$cpu['name']} {$cpu['model']}"?>" value="<?="{$cpu['model']}"?>">
 							<span class="checkmark"></span>
-							<?="{$cpu['name']}"?>
+							<?="{$cpu['name']} {$cpu['model']}"?>
 						</label>
 						<?php } } ?>
 				</div>
@@ -28,12 +47,12 @@
 				<div class="agen">
 					<p class="article">Поколение</p>
 					<?php
-						$gens = $connect->query('SELECT * FROM store GROUP BY model');
+						$gens = $connect->query('SELECT * FROM store GROUP BY generation');
 						if($gens) { foreach ($gens as $gen) { ?>
-						<label class="checkbox-label">
-							<input type="checkbox" class="checkbox" name="<?="{$gen['model']}"?>" value="<?="{$gen['model']}"?>">
+						<label class="checkbox-label <?="{$gen['generation']}"?>">
+							<input type="checkbox" class="checkbox" name="<?="{$gen['generation']}"?>" value="<?="{$gen['generation']}"?>">
 							<span class="checkmark"></span>
-							<?="{$gen['model']}"?>
+							<?="{$gen['generation']}"?>
 						</label>
 					<?php } } ?>
 				</div>
@@ -47,55 +66,7 @@
 			<!-- /.sidebar -->
 
 			<div class="content">
-				<div class="items">
-					<?php
-						$items = $connect->query('SELECT * FROM store');
-						$items_per_page = 8;
-						$number_of_results = mysqli_num_rows($items);
-						$number_of_pages = ceil($number_of_results/$items_per_page);
-						
-						if(!isset($_GET['page'])) { $page = 1; }
-						else { $page = $_GET['page']; }
-
-						$this_page_first_result = ($page - 1) * $items_per_page;
-						$items = $connect->query('SELECT * FROM store LIMIT ' . $this_page_first_result . ',' . $items_per_page);
-
-						if($items) { foreach ($items as $item) {  ?>
-						<div class="item-info">
-							<div class="item-card">
-								<div class="ic-front">
-									<div class="inner">
-										<p><?="{$item['name']}" ?></p>
-												<span><?="{$item['model']}" ?></span>
-									</div>
-								</div>
-								<div class="ic-back">
-									<div class="inner">
-										<p><?="{$item['description']}" ?></p>
-									</div>
-								</div>
-							</div>
-							<div class=item-price>
-								<div class="price-div">
-									<i class="fas fa-shopping-cart"></i>
-									<p class="price-p"><?="{$item['price']}" ?> руб.</p>
-									<i onclick="about_item()" class="fas fa-question"></i>
-								</div>
-								<button type="button" class="btn btn-dark btn-cust" data-toggle="modal" data-target="#ModalBuyItem">Оформить</button>
-							</div>	
-						</div>
-					<?php } } ?>
-				</div>
-				<!-- /.items -->	
-				
-				<div class="pagination">
-					<?php for($page = 1; $page <= $number_of_pages; $page++) {
-						if($page == $_GET['page']) { ?>
-						<a href="catalog.php?page=<?= $page ?>" class="pagination__number pagination__number-active"><?= $page ?></a> 
-						<?php } else { ?> <a href="catalog.php?page=<?= $page ?>" class="pagination__number"><?= $page ?></a> <?php  } ?>
-					<?php } ?>
-				</div>
-				<!-- /.pagination -->	
+				<?php include('./includes/items.php'); ?>
 			</div>
 			<!-- /.content -->
 		</div>

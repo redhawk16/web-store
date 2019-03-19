@@ -7,11 +7,7 @@ $(document).ready(function(){
 	menu_link();
 
 	function menu_link() {
-
 		let path = window.location.pathname;
-		//path = path.substring(path.length - (path.length - 1));
-
-		//let path = window.location.href;
 		for(let i = 0; i < link.length; i++) {
 			if(link[i].getAttribute('href') == path.split("/").pop()) { menu[i].classList.toggle('menu__active'); }
 		}
@@ -28,6 +24,43 @@ $(document).ready(function(){
 		});
 	}
 
+	//TODO: After checked on filter items add class .checkbox-label-active
+
+	//Get params of the filter
+	$('#btn-confirm').on('click', function() {
+		//$('.items').empty();
+		var checked = [];
+		$('.checkbox:checked').each(function() {
+				checked.push($(this).val());
+		});
+		if(checked != ''){
+			var sort = checked.join('%');
+			console.log(sort);
+			//$("#fon").css({'display':'block'}); //отключение
+			//$("#load").fadeIn(1000,function () { //anim load
+				$.ajax({
+				url:window.location,
+				data:'sort_by='+sort,
+				type:'GET',
+				success:function (html) {
+					$(".content").html(html).hide().fadeIn(1000);
+					//$("#fon").css({'display':'none'});
+					//$("#load").fadeOut(1000);
+				} 
+				
+				//});
+			});
+		}
+		//console.log(checked);
+	});
+
+	//Reset params of the filter
+	$('#btn-reset').on('click', function() {
+		$('.checkbox:checked').each(function() {
+			this.checked = false;
+		});
+	});
+
 });
 
 function about_item() {
@@ -36,11 +69,10 @@ function about_item() {
 	})
 }
 
-ymaps.ready(init);
-function init(){ 
+ymaps.ready(function (){ 
     var myMap = new ymaps.Map("map", {
         center: [54.990215, 73.365535],
         controls: ['zoomControl'],
         zoom: 10 //Уровень масштабирования от 0 (весь мир) до 19.
     });
-}
+});

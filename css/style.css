@@ -253,6 +253,7 @@ header .d-block {
           flex: 1 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0 1rem;
 }
 
 .box .content .items .item-info {
