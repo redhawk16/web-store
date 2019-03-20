@@ -33,7 +33,7 @@
 <div class="pagination">
 	<?php $number_of_pages = $functions->number_of_pages; for($page = 1; $page <= $number_of_pages; $page++) {
 		$link = 'page=' . $page;
-		if(isset($_GET['sort_by'])) { $link .= '&sort_by=' . $_GET['sort_by']; }
+		if(isset($_GET['sort_by'])) { $link .= '&sort_by=' . urlencode($_GET['sort_by']); }
 
 		if($page == $_GET['page']) { ?>
 			<a href="catalog.php?<?=$link?>" class="pagination__number pagination__number-active"><?= $page ?></a> 

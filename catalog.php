@@ -15,9 +15,6 @@
 			exit();
 		}
 
-
-
-		
 	} else $sort = [];  // In $sort send array of filtering items; 
 ?>
 
@@ -38,7 +35,16 @@
 						$cpus = $connect->query('SELECT * FROM store GROUP BY model DESC');
 						if($cpus) { foreach ($cpus as $cpu) { ?>
 						<label class="checkbox-label <?="{$cpu['model']}"?>">
+						<?php if(isset($_GET['sort_by'])) {
+							$str = strip_tags($_GET['sort_by']);
+							$search = explode('%', $str);			
+							if(array_search($cpu['model'], $search) === false) { ?>
+								<input type="checkbox" class="checkbox" name="<?="{$cpu['name']} {$cpu['model']}"?>" value="<?="{$cpu['model']}"?>">
+							<?php } else { ?><input type="checkbox" class="checkbox" checked="checked" name="<?="{$cpu['name']} {$cpu['model']}"?>" value="<?="{$cpu['model']}"?>"><?php } 
+						} else { ?>
 							<input type="checkbox" class="checkbox" name="<?="{$cpu['name']} {$cpu['model']}"?>" value="<?="{$cpu['model']}"?>">
+						<?php } ?>
+
 							<span class="checkmark"></span>
 							<?="{$cpu['name']} {$cpu['model']}"?>
 						</label>
@@ -51,7 +57,15 @@
 						$gens = $connect->query('SELECT * FROM store GROUP BY generation');
 						if($gens) { foreach ($gens as $gen) { ?>
 						<label class="checkbox-label <?="{$gen['generation']}"?>">
+						<?php if(isset($_GET['sort_by'])) {
+							$str = strip_tags($_GET['sort_by']);
+							$search = explode('%', $str);				
+							if(array_search($gen['generation'], $search) === false) { ?>
+								<input type="checkbox" class="checkbox" name="<?="{$gen['generation']}"?>" value="<?="{$gen['generation']}"?>">
+							<?php } else { ?><input type="checkbox" class="checkbox" checked="checked" name="<?="{$gen['generation']}"?>" value="<?="{$gen['generation']}"?>"><?php }
+						} else { ?>
 							<input type="checkbox" class="checkbox" name="<?="{$gen['generation']}"?>" value="<?="{$gen['generation']}"?>">
+						<?php }?>
 							<span class="checkmark"></span>
 							<?="{$gen['generation']}"?>
 						</label>

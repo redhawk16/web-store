@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
+	
 /* Color's define */
 $primary: #019fb6
 $accent: #61b766
@@ -120,6 +122,68 @@ header
 		height: 420px
 		object-fit: cover
 
+.box-content
+	width: 100%
+	background-color: $dwhite
+	margin-bottom: 2rem
+	padding: 1.5rem 3rem
+
+	.contents
+		margin-bottom: 3rem
+
+	.title
+		font-family: 'Roboto Condensed', sans-serif
+		font-weight: 700
+		font-size: 40px
+		margin-left: 50px
+		margin-bottom: 1.5rem
+
+	.welcome
+		.text
+			text-indent: 2rem
+			text-align: justify
+			margin-bottom: 0
+
+	.whywe-items
+		display: flex
+		width: 100%
+		justify-content: space-evenly
+		
+		.whywe
+			&-item
+				cursor: pointer
+				padding: 1rem
+				border-radius: 2rem
+				box-shadow: 0 0 .2rem rgba(#969696, .5)
+				background: darken(#fff, 5)
+				width: 25%
+				transition: ease .8s
+				&:hover
+					background: darken(#fff, 10)
+					transform: scale(1.08)
+					.fa-balance-scale
+						color: #003b9b
+					.fa-award
+						color: #0dc43e
+					.fa-bolt
+						color: #e8e00b
+
+				h6
+					font-size: 24px
+					text-align: center
+					font-family: 'Roboto Condensed', sans-serif
+					font-weight: 700
+				.text
+					text-align: center
+					margin: 0
+
+				&__img
+					display: block
+					text-align: center
+					font-size: 8rem
+					margin-bottom: 2rem
+					transition: ease .6s
+	/* Catalog.php */
 .box
 	display: flex
 	width: 100%

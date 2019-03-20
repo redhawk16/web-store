@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:700");
 /* Color's define */
 body {
   background-color: #d3d3d3;
@@ -116,6 +117,93 @@ header .d-block {
   height: 420px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.box-content {
+  width: 100%;
+  background-color: #f7f7f7;
+  margin-bottom: 2rem;
+  padding: 1.5rem 3rem;
+  /* Catalog.php */
+}
+
+.box-content .contents {
+  margin-bottom: 3rem;
+}
+
+.box-content .title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin-left: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.box-content .welcome .text {
+  text-indent: 2rem;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+.box-content .whywe-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.box-content .whywe-items .whywe-item {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 0 0.2rem rgba(150, 150, 150, 0.5);
+          box-shadow: 0 0 0.2rem rgba(150, 150, 150, 0.5);
+  background: #f2f2f2;
+  width: 25%;
+  -webkit-transition: ease .8s;
+  transition: ease .8s;
+}
+
+.box-content .whywe-items .whywe-item:hover {
+  background: #e6e6e6;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.box-content .whywe-items .whywe-item:hover .fa-balance-scale {
+  color: #003b9b;
+}
+
+.box-content .whywe-items .whywe-item:hover .fa-award {
+  color: #0dc43e;
+}
+
+.box-content .whywe-items .whywe-item:hover .fa-bolt {
+  color: #e8e00b;
+}
+
+.box-content .whywe-items .whywe-item h6 {
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+}
+
+.box-content .whywe-items .whywe-item .text {
+  text-align: center;
+  margin: 0;
+}
+
+.box-content .whywe-items .whywe-item__img {
+  display: block;
+  text-align: center;
+  font-size: 8rem;
+  margin-bottom: 2rem;
+  -webkit-transition: ease .6s;
+  transition: ease .6s;
 }
 
 .box {
