@@ -30,3 +30,7 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="preloader" class="preloader">
+			<div id="loader"></div>
+		</div>

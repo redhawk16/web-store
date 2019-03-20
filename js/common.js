@@ -1,3 +1,12 @@
+document.body.onload = function() {
+	setTimeout(function() {
+		var preloader = document.getElementById('preloader');
+		if(!preloader.classList.contains('preloader-done')){
+			preloader.classList.add('preloader-done');
+		}
+	}, 1000); 
+}
+
 $(document).ready(function(){
 	/*	NavBar fix	*/
 	let navbar = document.getElementById("nav");
