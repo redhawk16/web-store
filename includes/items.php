@@ -43,7 +43,7 @@
 		if(isset($_GET['gen'])) { $link .= '&' . http_build_query(array('gen' => $_GET['gen'])); }
 
 		if($page == $_GET['page']) { ?>
-			<a href="catalog.php?<?=$link?>" class="pagination__number pagination__number-active"><?= $page ?></a> 
+			<a href="catalog.php?<?=$link?>" class="pagination__number pagination__number-current"><?= $page ?></a> 
 		<?php } else { ?> <a href="catalog.php?<?=$link?>" class="pagination__number"><?= $page ?></a> <?php  } ?>
 	<?php } ?>
 </div>

@@ -3,12 +3,15 @@ document.body.onload = function() {
 		var preloader = document.getElementById('preloader');
 		if(!preloader.classList.contains('preloader-done')){
 			preloader.classList.add('preloader-done');
+			$('#loader').fadeOut(1000, function() {
+				$('#preloader').remove();
+			});
 		}
 	}, 1000); 
 }
 
 $(document).ready(function(){
-	/*	NavBar fix	*/
+	//Navigation Bar Fix
 	let navbar = document.getElementById("nav");
 	let menu = navbar.getElementsByClassName("menu");
 	let link = navbar.getElementsByClassName("menu__link");
@@ -33,9 +36,9 @@ $(document).ready(function(){
 		});
 	}
 
-	//TODO: After checked on filter items add class .checkbox-label-active
+	//TODO: GET запрос
 
-	//Get params of the filter
+	//Filter Submit Button
 	$('#btn-confirm').on('click', function() {
 		var data = $("#filter").serialize();
 		$.ajax({
@@ -43,12 +46,11 @@ $(document).ready(function(){
 			data: data,
 			type: 'GET',
 			success: function (html) {
-				window.history.replaceState({}, "filter", window.location.pathname + "?" +data);
+				window.history.replaceState({}, "filter", window.location.pathname + "?" + data);
 				
 				$(".content").fadeOut(500, function() {
-					$(".content").empty().append( "<div id=\"loader\"></div>" );
-					$(".content").fadeIn(500, function() {
-							$("#loader").delay(200).fadeOut(500, function() { show(); });
+					$(".content").empty().append( "<div id=\"loader\"></div>" ).fadeIn(500, function() {
+							$("#loader").delay(200).fadeOut(800, function() { show(); });
 					});
 				});
 
@@ -59,7 +61,7 @@ $(document).ready(function(){
 		});
 	});
 
-	//Reset params of the filter
+	//Filter Reset Button
 	$('#btn-reset').on('click', function() {
 		$('.checkbox:checked').each(function() {
 			this.checked = false;

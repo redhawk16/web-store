@@ -445,7 +445,7 @@ header .d-block {
   transition: color, background-color .2s linear;
 }
 
-.box .content .pagination__number:hover, .box .content .pagination__number-active {
+.box .content .pagination__number:hover, .box .content .pagination__number-current {
   color: black;
   background: rgba(0, 0, 0, 0.1);
 }
