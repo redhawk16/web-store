@@ -11,13 +11,6 @@ document.body.onload = function() {
 }
 
 $(document).ready(function(){
-	var url = '?page=1&cpu%5B%5D=i5&cpu%5B%5D=i3&gen%5B%5D=Coffe-Lake&gen%5B%5D=Nehalem';//window.location.search;
-	console.log('1 '+url);
-	var arr=decodeURI(url);
-	console.log('2 '+arr);
-	console.log(arr.substring(arr.indexOf('&') + 1));
-	console.log(url.substring(url.indexOf('&') + 1));
-
 	//Navigation Bar Fix
 	let navbar = document.getElementById("nav");
 	let menu = navbar.getElementsByClassName("menu");
