@@ -87,6 +87,7 @@ function item_page_reload(data) {
 			}
 		}
 	});
+}
 
 function about_item(e) {
 	var id = ($(e).parent().parent().parent()).attr('id');

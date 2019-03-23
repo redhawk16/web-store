@@ -31,12 +31,6 @@
 			</div>
 		</div>
 
-<<<<<<< HEAD
-		<!-- <div id="preloader" class="preloader">
-			<div id="loader"></div>
-		</div> -->
-=======
 		<div id="preloader" class="preloader">
 			<div id="loader"></div>
 		</div>
->>>>>>> 635a76a99d91ea835c9c643c9ca692991fe2dcc3

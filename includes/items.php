@@ -43,13 +43,8 @@
 		if(isset($_GET['gen'])) { $link .= '&' . http_build_query(array('gen' => $_GET['gen'])); }
 
 		if($page == $_GET['page']) { ?>
-<<<<<<< HEAD
 			<a href="#" onclick="page(<?= $page ?>)" class="pagination__number pagination__number-current"><?= $page ?></a> 
 		<?php } else { ?> <a href="#" onclick="page(<?= $page ?>)" class="pagination__number"><?= $page ?></a> <?php  } ?>
-=======
-			<a href="catalog.php?<?=$link?>" class="pagination__number pagination__number-current"><?= $page ?></a> 
-		<?php } else { ?> <a href="catalog.php?<?=$link?>" class="pagination__number"><?= $page ?></a> <?php  } ?>
->>>>>>> 635a76a99d91ea835c9c643c9ca692991fe2dcc3
 	<?php } ?>
 </div>
 <!-- /.pagination -->
