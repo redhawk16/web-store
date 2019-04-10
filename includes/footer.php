@@ -5,10 +5,10 @@
 				<div class="logo"><img src="assets/img/logo.png" align="middle" alt="Logo"></div>
 				<ul style="padding-left: 0px;">
 					<li class="li-main">Карта Сайта</li>
-					<li><a href="index.php">Главная</a></li>
-					<li><a href="catalog.php">Каталог</a></li>
-					<li><a href="#CONTACT">Контакты</a></li>
-					<li><a href="#ABOUT">О нас</a></li>
+					<li><a href="index">Главная</a></li>
+					<li><a href="catalog">Каталог</a></li>
+					<li><a href="contacts">Контакты</a></li>
+					<li><a href="about">О нас</a></li>
 				</ul>
 			</div>
 			<div class="footer__devider"></div>

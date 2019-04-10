@@ -1,8 +1,8 @@
-<?php include('./includes/connect.php'); ?>
+<?php require_once('./includes/connect.php'); ?>
 
 <!DOCTYPE HTML>
 <html>
-	<?php include_once('./includes/header.php'); ?>
+	<?php require_once('./includes/header.php'); ?>
 
 			<!-- Carousel -->
 			<div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
@@ -100,6 +100,6 @@
 			</div>
 		</div>
 
-		<?php include_once('./includes/footer.php') ?>
+		<?php require_once('./includes/footer.php') ?>
 	</body>
 </html>

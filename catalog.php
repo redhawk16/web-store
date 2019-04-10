@@ -1,6 +1,6 @@
 <?php 
-	include_once('./includes/connect.php'); 
-	include_once('./includes/functions.php');
+	require_once('./includes/connect.php'); 
+	require_once('./includes/functions.php');
 
 	$connect = get_connect();
 	if($_GET['page'] == 0) { header("Location:catalog.php?page=1"); }
@@ -8,7 +8,7 @@
 
 <!DOCTYPE HTML>
 <html>
-	<?php include_once('./includes/header.php'); ?>
+	<?php require_once('./includes/header.php'); ?>
 	</header>
 
 		<div class="box">
@@ -69,12 +69,12 @@
 			<!-- /.sidebar -->
 
 			<div class="content">
-				<?php include_once('./includes/items.php'); ?>
+				<?php require_once('./includes/items.php'); ?>
 			</div>
 			<!-- /.content -->
 		</div>
 
-		<?php include_once('./includes/footer.php'); ?>
+		<?php require_once('./includes/footer.php'); ?>
 	</body>
 
 	<?php include_once('./includes/modal_buy.php'); ?>

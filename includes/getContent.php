@@ -1,5 +1,5 @@
 <?php 
-	include('connect.php');
+	require_once('connect.php');
 	$connect = get_connect();
 
 	$id = $_POST['id'];

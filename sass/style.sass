@@ -288,7 +288,7 @@ header
 
 			.item-info
 				justify-content: space-between
-				margin: 1rem
+				margin: 1rem 2.3rem
 				max-width: 250px
 
 				.btn-cust
@@ -693,3 +693,69 @@ footer
 		-webkit-transform: rotate(360deg)
 		-ms-transform: rotate(360deg)
 		transform: rotate(360deg)
+
+
+// contacts.php
+.contacts
+	display: inline-block
+
+	&-left
+		width: 50%
+		float: left
+
+		& .fas
+			padding-right: .5rem
+
+		& a
+			text-decoration: none
+			color: black
+			transition: color .5s
+			&:hover
+				color: #53995b
+		
+		& .fab
+			cursor: pointer
+			font-size: 1.5rem
+			margin-right: 2rem
+			transition: color .5s
+			&:hover
+				color: #4a76a8
+
+	&-right
+		width: 50%
+		float: right
+		text-align: center
+		align-items: center
+
+	&__form
+		display: inline-flex
+		flex-direction: column
+
+		& input
+			margin-bottom: 1rem
+			padding: .5rem 1rem
+			&:focus
+				outline-color: #53995b
+		textarea:focus
+			outline-color: #53995b
+
+	&__btn
+		width: fit-content
+		margin-top: 1rem
+
+
+// Owl-Carousel
+.owl-theme .item
+	background-color: grey
+	height: 100%
+	width: 100%
+	overflow: hidden
+	
+	img
+		height: 100%
+		transition: all ease-in-out .4s
+		opacity: .6
+
+		&:hover
+			opacity: 1
+			transform: scale(1.1)

@@ -51,12 +51,39 @@ $(document).ready(function(){
 		});
 	});
 
+
+	// Owl-Carousel
+	$('.owl-carousel').owlCarousel({
+		loop: true,
+		autoplay: true,
+		autoplayHoverPause: true,
+		margin: 50,
+		nav: false,
+		dots: false,
+		responsive:{
+			0:{
+				items: 1
+			},
+			480:{
+				items: 2
+			},
+			768:{
+				items: 3
+			},
+			1240:{
+				items: 4
+			}
+		}
+	})
 });
 
 //Pagination ajax
-function page(num) {
+function page(num, event) {
+	event = window.event;
+	event.preventDefault();
+
 	var url = window.location.search;
-	console.log(url);
+	//console.log(url);
 	if(url.indexOf('&') != -1) {
 		url = url.substring(url.indexOf('&') + 1);
 		url = "page=" + num + "&" + url; //set page number

@@ -8,6 +8,7 @@
 
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=b4c8f470-ee66-4d3f-9a05-b627095fabdb&lang=ru_RU" type="text/javascript"></script>
 	<script src="js/libs.min.js"></script>		
+	<script src="js/owl.carousel.min.js"></script>	
 	<script async src="js/common.js"></script>	
 </head>
 
@@ -15,13 +16,13 @@
 	<header>
 		<div class="header">
 			<div class="navbar">
-				<div class="logo"><a href="/index.php"><img src="assets/img/logo.png" width="auto" height="100%" align="middle" alt="Logo" title="На главную"></a></div>
+				<div class="logo"><a href="index"><img src="assets/img/logo.png" width="auto" height="100%" align="middle" alt="Logo" title="На главную"></a></div>
 				<nav id="nav" class="nav">
 					<ul style="padding-left: 0px;">
-						<li class="menu"><a class="menu__link" href="index.php">Главная</a></li>
-						<li class="menu"><a class="menu__link" href="catalog.php">Каталог</a></li>
-						<li class="menu"><a class="menu__link" href="#CONTACT">Контакты</a></li>
-						<li class="menu"><a class="menu__link" href="#ABOUT">О нас</a></li>
+						<li class="menu"><a class="menu__link" href="index">Главная</a></li>
+						<li class="menu"><a class="menu__link" href="catalog">Каталог</a></li>
+						<li class="menu"><a class="menu__link" href="contacts">Контакты</a></li>
+						<li class="menu"><a class="menu__link" href="about">О нас</a></li>
 					</ul>	
 				</nav>
 				<div class="info">
@@ -31,6 +32,6 @@
 			</div>
 		</div>
 
-		<div id="preloader" class="preloader">
+		<!-- <div id="preloader" class="preloader">
 			<div id="loader"></div>
-		</div>
+		</div> -->

@@ -1,6 +1,6 @@
 <?php 
-	include_once('connect.php'); 
-	include_once('functions.php');
+	require_once('connect.php'); 
+	require_once('functions.php');
 
 	$connect = get_connect();
 ?>
@@ -43,8 +43,8 @@
 		if(isset($_GET['gen'])) { $link .= '&' . http_build_query(array('gen' => $_GET['gen'])); }
 
 		if($page == $_GET['page']) { ?>
-			<a href="#" onclick="page(<?= $page ?>)" class="pagination__number pagination__number-current"><?= $page ?></a> 
-		<?php } else { ?> <a href="#" onclick="page(<?= $page ?>)" class="pagination__number"><?= $page ?></a> <?php  } ?>
+			<a href="catalog.php?page=<?= $page ?>" onclick="page(<?= $page ?>)" class="pagination__number pagination__number-current"><?= $page ?></a> 
+		<?php } else { ?> <a href="catalog.php?page=<?= $page ?>" onclick="page(<?= $page ?>)" class="pagination__number"><?= $page ?></a> <?php  } ?>
 	<?php } ?>
 </div>
 <!-- /.pagination -->
