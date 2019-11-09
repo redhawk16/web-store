@@ -4,11 +4,11 @@
 [Открыть демо.](http://u999451g.beget.tech/test/)
 
 ## Скриншоты
-> **Главная страница**<br\>
+> **Главная страница**<br/>
 ![index php](screens/index.png?raw=true "Главная страница")
 
-> **Каталог**<br\>
+> **Каталог**<br/>
 ![news php](screens/catalog.png?raw=true "Каталог")
 
-> **Контакты**<br\>
+> **Контакты**<br/>
 ![news php](screens/contacts.png?raw=true "Контакты")
